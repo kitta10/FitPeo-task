@@ -1,4 +1,4 @@
-from FitPeo.POM.homepage import HomePage
+from POM.homepage import HomePage
 
 
 class RevenueCalculatorPage(HomePage):

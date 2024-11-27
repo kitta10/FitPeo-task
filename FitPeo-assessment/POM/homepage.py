@@ -1,4 +1,4 @@
-from FitPeo.Library.libraries import Base
+from Library.libraries import Base
 
 
 class HomePage(Base):

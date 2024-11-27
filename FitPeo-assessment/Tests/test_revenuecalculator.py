@@ -1,5 +1,5 @@
 from time import sleep
-from FitPeo.POM.revenuecalcpage import RevenueCalculatorPage
+from POM.revenuecalcpage import RevenueCalculatorPage
 
 def test_run(driver):
     revenue = RevenueCalculatorPage(driver)
