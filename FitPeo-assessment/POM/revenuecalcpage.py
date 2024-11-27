@@ -14,8 +14,15 @@ class RevenueCalculatorPage(HomePage):
     def scroll_to_top(self):
         self.scroll(self.trr_locator)
 
-    def move_knob_to_826(self):
-        self.move_element_by_pixel(self.scroll_knob_locator, 94, 0)
+    def move_knob_to_value(self, value):
+        textbox = self.search_for_an_element(self.text_box_locator)
+        while textbox.get_attribute("value") < value:
+            self.move_element_by_pixel(self.scroll_knob_locator, 2, 0)
+
+    def compare_knob_with_textbox(self):
+        knob = self.search_for_an_element(self.scroll_knob_locator)
+        textbox = self.search_for_an_element(self.text_box_locator)
+        return knob.get_attribute("value") == textbox.get_attribute("value")
 
     def move_knob_left_until(self, target):
         element = self.search_for_an_element(self.text_box_locator)
